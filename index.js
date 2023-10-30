@@ -26,20 +26,21 @@ app.get('/', function (req, res) {
 })
 
 // front 에서 요청한 주소임
-app.post('/data', (req, res) => {
+app.get('/data', (req, res) => {
     const { p_id } = req.query;
     const { action } = req.query;
+    console.log("action", action);
+    res.send(`connec`);
+    // var query = "";
 
-    var query = "";
-
-    if(action === "getSkill") {
-        query = "SELECT * FROM `skill`";
-    } else if(action === "getWork") {
-        console.log("work");
-    }
+    // if(action === "getSkill") {
+    //     query = "SELECT * FROM `skill`";
+    // } else if(action === "getWork") {
+    //     console.log("work");
+    // }
 
 
-    dbConnect(res, query);
+    // dbConnect(res, query);
 })
 
 
@@ -47,11 +48,11 @@ const dbConnect = (res, query) => {
     // DB 연동
     // config/index.js 에서 수정 가능
     const conn = {  // mysql 접속 설정
-        host: config.db.host,   
-        port: config.db.port,   
+        host: config.db.host,
+        port: config.db.port,
         user: config.db.username,
-        password: config.db.password,   
-        database: config.db.database   
+        password: config.db.password,
+        database: config.db.database
     };
 
     var connection = mysql.createConnection(conn); // DB 커넥션 생성

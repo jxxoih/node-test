@@ -7,7 +7,7 @@ const config = {
         serverdis: process.env.SERVER_DIS || "nodeTest",
     },
     db: {
-        host: process.env.MYSQL_PRIMARY_HOST || "127.0.0.1",
+        host: process.env.MYSQL_PRIMARY_HOST || "3.34.197.5",
         port: process.env.MYSQL_PRIMARY_PORT || "3380",
         username:
             process.env.MYSQL_PRIMARY_USERNAME ||

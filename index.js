@@ -47,11 +47,11 @@ const dbConnect = (res, query) => {
     // DB 연동
     // config/index.js 에서 수정 가능
     const conn = {  // mysql 접속 설정
-        host: config.db.host,   // 127.0.0.1
-        port: config.db.port,   // 3380
-        user: config.db.username,   // jiho
-        password: config.db.password,   // 1111
-        database: config.db.database    // db name
+        host: config.db.host,   
+        port: config.db.port,   
+        user: config.db.username,
+        password: config.db.password,   
+        database: config.db.database   
     };
 
     var connection = mysql.createConnection(conn); // DB 커넥션 생성

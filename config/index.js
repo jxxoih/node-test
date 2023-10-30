@@ -17,7 +17,7 @@ const config = {
             "1111",
         database:
             process.env.MYSQL_PRIMARY_DATABASE ||
-            "test",
+            "portfolio",
     }
 };
 
